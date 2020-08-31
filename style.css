@@ -1,0 +1,16 @@
+h3{
+    padding: 30px;
+    border: 30px;
+    height: 3rem;
+    justify-content: center;
+    display:flex;
+}
+
+typingBox{
+    padding: 300px;
+    border: 300px;
+    border-block-color: red;
+    background-color: red;
+   
+    
+}
