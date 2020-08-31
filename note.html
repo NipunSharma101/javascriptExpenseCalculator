@@ -7,16 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h3> this is a javascript note taking app</h3>
-    </div>
-    <div class="typingBox">
-        <input type="text" name="fnote" placeholder="enter note here" required/>
-        <button id = 'iclass="savebtn">Save</button>
-    </div>
+    
+    <button id="incBtn">+</button>
     <script>
         let counter = 0;
-        counter= counter+ 1;
+        
+       function counterInc() {
+            counter = counter+1;
+            console.log(counter);
+        };
+
+
+        const element = document.querySelector("#incBtn");
+        element.addEventListener("click", counterInc, false)
+        console.log(element);
+        
+
     </script>
+
+    
+
 </body>
 </html>

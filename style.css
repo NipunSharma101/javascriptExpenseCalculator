@@ -1,16 +1,7 @@
-h3{
-    padding: 30px;
-    border: 30px;
-    height: 3rem;
+body{
+    display: flex;
+    align-items: center;
     justify-content: center;
-    display:flex;
-}
-
-typingBox{
-    padding: 300px;
-    border: 300px;
-    border-block-color: red;
-    background-color: red;
-   
+    height: 100vh;
     
 }
