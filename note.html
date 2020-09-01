@@ -8,27 +8,45 @@
 </head>
 <body>
     <h3 id="totalDisplay"></h3>
-    <input id= "inputAmount" type="text">
+    <input id= "inputAmount" type="text" placeholder="Amount spent">
+    <input id="inputDesc" type = "text" placeholder= "On what item">
     
     <button id="addBtn">+</button>
     <script>
         let totalExpense = 0;
         const displayAmount = document.querySelector("#totalDisplay");
+        const inputDescEl = document.querySelector("#inputDesc");
+        const inputElement = document.querySelector("#inputAmount") ;
         displayAmount.textContent= totalExpense;
-       function addExpenseToTotal() {
-            const inputElement = document.querySelector("#inputAmount") ;
-            const textAmount = inputElement.value;
-            
-            const expense = parseInt(textAmount,10);
 
-            totalExpense= totalExpense + expense;
-            console.log(totalExpense)
-            displayAmount.textContent = totalExpense;
-        };
+        // making array
+        const allExpense = [];
+
+        function addExpenseToTotal() {
+                const expenseItem = {};    
+
+                const textAmount = inputElement.value;
+                
+                const expense = parseInt(textAmount,10);
+
+                totalExpense= totalExpense + expense;
+                
+                displayAmount.textContent = totalExpense;
+                // displayAmount ki value hai display hone walin jagah ka address
+                
+                const textDesc = inputDescEl.value; 
+                // console.log({totalExpense,  textDesc});
+                expenseItem.amount = expense;
+                expenseItem.description = textDesc;
+                console.log({expenseItem})
+                allExpense.push(expenseItem);
+
+                console.table(allExpense);
+            };
         
 
         const element = document.querySelector("#addBtn");
-        element.addEventListener("click", addExpenseToTotal, false)
+        element.addEventListener("click", addExpenseToTotal, false);
         
         
 
